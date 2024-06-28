@@ -30,22 +30,10 @@ public class StudentManagement {
         st = con.createStatement();
     }
 
-    public static void clearScreen() {
-        try {
-            if (System.getProperty("os.name").contains("Windows")) {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            } else {
-                System.out.print("\033[H\033[2J");
-                System.out.flush();
-            }
-        } catch (IOException | InterruptedException e) {
-        }
-    }
 
     public static void dashboard() throws Exception {
         Scanner s = new Scanner(System.in);
         while (true) {
-            clearScreen();
             System.out.println("..........................................................");
             System.out.println(" | Welcome to Developer Stack Student Management System | ");
             System.out.println("..........................................................\n");
@@ -91,7 +79,7 @@ public class StudentManagement {
     
     public static void addStudent() throws Exception {
     Scanner s = new Scanner(System.in);
-    clearScreen();
+ 
     System.out.println("..........................................................");
     System.out.println(" | Welcome to Developer Stack Student Management System | ");
     System.out.println("..........................................................\n");
@@ -156,7 +144,6 @@ public class StudentManagement {
 
     public static void editStudent() throws Exception {
     Scanner s = new Scanner(System.in);
-    clearScreen();
     System.out.println("..........................................................");
     System.out.println(" | Welcome to Developer Stack Student Management System | ");
     System.out.println("..........................................................\n");
@@ -270,7 +257,6 @@ public class StudentManagement {
 
     public static void deleteStudent() throws Exception {
         Scanner s = new Scanner(System.in);
-        clearScreen();
         System.out.println("..........................................................");
         System.out.println(" | Welcome to Developer Stack Student Management System | ");
         System.out.println("..........................................................\n");
@@ -299,7 +285,6 @@ public class StudentManagement {
 
     public static void viewAllStudents() throws Exception {
         Scanner s = new Scanner(System.in);
-        clearScreen();
         System.out.println("..........................................................");
         System.out.println(" | Welcome to Developer Stack Student Management System | ");
         System.out.println("..........................................................\n");
@@ -325,7 +310,6 @@ public class StudentManagement {
 
     public static void viewStudentByNIC() throws Exception {
         Scanner s = new Scanner(System.in);
-        clearScreen();
         System.out.println("..........................................................");
         System.out.println(" | Welcome to Developer Stack Student Management System | ");
         System.out.println("..........................................................\n");
